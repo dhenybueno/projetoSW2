@@ -16,28 +16,24 @@
         <div class="row">
             <div class="col-sm-8 mx-auto mt-3 border border-primary">
 
-                <h3 class="text-center p-3">Preencha os dados abaixo</h3>
+                <h3 class="text-center p-3">confirmaçao cadastro</h3>
 
-                <from action="administrador_cadastro.php">
+               <div>
+                <?php
+                 $nome = $_REQUEST['nome'];
+                 $login = $_REQUEST['loin'];
+                 $senha = $_REQUEST['senha'];
 
-                    <p>
-                        digite o nome do administrador<br>
-                        <input type="text" name="nome" class="form-control" >
-                    </p>
-                    <p>
-                        digite o login<br>
-                        <input type="text" name="login" class="form-control" >
-                    </p>
-                    <p>
-                        digite a senha<br>
-                        <input type="password" name="senha" class="form-control" >
-                    </p>
-                    <p>
-                        <input type="submit" value="Cadastrar">
-                        <input type="reset" value="Limpar">
-                        <a href="#">voltar</a>
-                    </p>
-                </from>
+                 echo "nome do administrador: $nome <br>
+                       login: $login <br>
+                       senha $senha <br>";
+
+                    $sql = "insert into administrador(nome,login,senha)
+                        value (:nome, :login, :senha)";
+
+                        include "conexao.php";
+                        $result = $conexao->prepare($sql);
+              ?>  
 
             </div>
         </div>
