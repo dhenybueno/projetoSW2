@@ -15,55 +15,70 @@
     <div class="container-fluid bg-primary text-white text-center p-5">
         <h1>Projeto SW2</h1>
         <p>
-            dhenybueno
+            Elaborado por Guilherme Henrique de Souza
         </p>
     </div>
 
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
 
             <div class="col-sm-4"> 
                 <h1 class="bg-primary text-warning">Administrador</h1>
-                 <p class="text-primary">
-                 utilize esta opçao para realizar o cadastro
-                 de novos administradores, ou editalos
-                
-            </p>
+                <p class="text-primary">
+                    Utilize esta opção para realizar o cadastro
+                    de novos administradores, ou edita-los.
+                </p>
+                <p>
+                    <a href="administrador.php" class="btn btn-primary">Clique</a>
+                </p>
             </div>
 
             <div class="col-sm-4"> 
                 <h1 class="bg-danger">Categorias</h1>
-            <p class="col-sm-4">
-                utilize esta opçao para cadastrar as Categorias
-                dos produtos que serao vendidos on-line.
-              
-           </p> 
+                <p class="text-danger">
+                    Utilize esta opção para cadastrar as categorias 
+                    dos produtos que serão vendidos on-line.
+                </p>
+                <p>
+                    <a href="categoria.php" class="btn btn-danger">Clique</a>
+                </p>
             </div>
 
             <div class="col-sm-4"> 
-                <h1 class="bg-succes">Fornecedor</h1>
+                <h1 class="bg-success">Fornecedor</h1>
                 <p class="text-success">
-                utilize esta opçao para cadastrar os fornecedores
-                dos produtos on-line.
-            </p>
+                    Utilize esta opção para cadastrar os fornecedores
+                    dos produtos que serão vendidos on-line.
+                </p>
+                <p>
+                    <a href="fornecedor.php" class="btn btn-success">Clique</a>
+                </p>
             </div>
-
         </div>
 
-    <div class="row">
+        <div class="row">
 
-    <div class="col-sm-6">
-      <h1>produtos</h1>
+            <div class="col-sm-6">
+                <h1 class="bg-warning">Produtos</h1>
+                <p class="text-warning">
+                    Utilize esta opção para cadastrar os produtos
+                    que serão vendidos no site.
+                </p>
+                <p>
+                    <a href="produto.php" class="btn btn-warning">Clique</a>
+                </p>
+            </div>
+
+            <div class="col-sm-6">
+                <h1 class="bg-secondary">Vendas</h1>
+                <p class="text-secondary">
+                    Utilize esta opção para visualizar as Vendas
+                    realizadas pelos clientes.
+                </p>
+            </div>
+        </div>
+
     </div>
-
-    <div class="col-sm-6">
-      <h1>vendas</h1>
-    </div>
-
-
- </div>
-
-</div>
 
 
 </body>
