@@ -9,36 +9,38 @@
 </head>
 <body>
     <div class="bg-primary text-white p-3 text-center">
-        <h1>Cadastro de Administradores</h1>
     </div>
 
     <div class="container">
         <div class="row">
             <div class="col-sm-8 mx-auto mt-3 border border-primary">
 
-                <h3 class="text-center p-3">Preencha os dados abaixo</h3>
+                <h3 class="text-center p-3">Confirmação do Cadastro</h3>
 
-                <from action="administrador_cadastro.php">
+                <div>
+                    <?php
+                    $nome = $_REQUEST["nome"];
+                    $login = $_REQUEST["login"];
+                    $senha = md5( $_REQUEST["senha"]);
 
-                    <p>
-                        digite o nome do administrador<br>
-                        <input type="text" name="nome" class="form-control" >
-                    </p>
-                    <p>
-                        digite o login<br>
-                        <input type="text" name="login" class="form-control" >
-                    </p>
-                    <p>
-                        digite a senha<br>
-                        <input type="password" name="senha" class="form-control" >
-                    </p>
-                    <p>
-                        <input type="submit" value="Cadastrar">
-                        <input type="reset" value="Limpar">
-                        <a href="#">voltar</a>
-                    </p>
-                </from>
+                    echo "Nome do Administrador: $nome <br>
+                    
+                            Login: $login <br>
+                            Senha: $senha <br>";
 
+                    $sql = "insert into administrador(nome, login, senha)
+                            values (:nome, :login, :senha)";
+
+                    include "conexao.php";
+                    $result = $conexao->prepare($sql); 
+                    $result->bindValue(":nome", $nome);
+                    $result->bindValue(":login", $login);
+                    $result->bindValue(":senha", $senha);
+                    $result->execute();
+
+                    echo "<p>O administrador foi cadastrado com sucesso! </p>"
+
+                    ?>
             </div>
         </div>
     </div>
